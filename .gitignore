@@ -37,3 +37,7 @@ consul/data
 
 # Ignore `backend.tf` for the root dir
 backend.tf
+
+# Ignore Node.js and yarn files
+node_modules/
+yarn.lock

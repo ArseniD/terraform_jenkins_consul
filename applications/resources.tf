@@ -1,4 +1,4 @@
-#Based on the work from https://github.com/arbabnazar/terraform-ansible-aws-vpc-ha-wordpress
+# Based on the work from https://github.com/arbabnazar/terraform-ansible-aws-vpc-ha-wordpress
 
 ##################################################################################
 # CONFIGURATION - added for Terraform 0.14
@@ -185,8 +185,9 @@ resource "aws_cloudwatch_metric_alarm" "scale_down_alarm" {
   alarm_actions     = [aws_autoscaling_policy.scale_down.arn]
 }
 
-## Database Config 
-
+#
+# Database Config
+#
 resource "aws_db_subnet_group" "db_subnet_group" {
   name       = "${terraform.workspace}-ddt-rds-subnet-group"
   subnet_ids = data.terraform_remote_state.networking.outputs.private_subnets
